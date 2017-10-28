@@ -6,6 +6,14 @@ nums = numpy.random.randint(100, size=20).tolist()
 sortedNums = sorted(nums)
 
 try:
+    from heap import heapsort
+    if(heapsort(list(nums)) == sortedNums):
+        print "heap sort success!"
+    else:
+        print "heap sort incorrect"
+except:
+    print "heap sort function error or is incomplete."
+try:
     from bubble import bubble
     if(bubble(list(nums)) == sortedNums):
         print "bubblesort success!"
